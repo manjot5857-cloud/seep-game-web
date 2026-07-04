@@ -49,6 +49,9 @@ document.getElementById("playNowBtn").onclick=()=>{
         mode:selectedMode
 
     });
+    localStorage.setItem("roomId", result.roomId);
+
+    window.location = "waiting-room.html";
 
     // Next step:
     // POST /api/rooms/create
