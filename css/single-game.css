@@ -1,6 +1,6 @@
-/* ===========================
+/* ==================================================
    GLOBAL
-=========================== */
+================================================== */
 
 *{
     margin:0;
@@ -12,17 +12,9 @@ body{
 
     font-family:'Poppins',sans-serif;
 
-    background:linear-gradient(180deg,#111827,#1F2937);
+    background:#111827;
 
     color:white;
-
-    height:100vh;
-
-    overflow:hidden;
-
-}
-
-.page{
 
     display:flex;
 
@@ -30,36 +22,49 @@ body{
 
     align-items:center;
 
-    height:100%;
-
-    padding:15px;
+    min-height:100vh;
 
 }
 
-/* ===========================
+.page{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:20px;
+
+}
+
+/* ==================================================
    MAIN PANEL
-=========================== */
+================================================== */
 
 .panel{
 
-    width:100%;
-    max-width:430px;
+    width:430px;
+
+    max-width:95%;
 
     background:#1F2937;
 
+    border-radius:20px;
+
     border:2px solid #374151;
 
-    border-radius:24px;
+    padding:25px;
 
-    padding:18px;
-
-    box-shadow:0 15px 40px rgba(0,0,0,.45);
+    box-shadow:0 15px 40px rgba(0,0,0,.35);
 
 }
 
-/* ===========================
+/* ==================================================
    HEADER
-=========================== */
+================================================== */
 
 .header{
 
@@ -69,13 +74,13 @@ body{
 
     align-items:center;
 
-    margin-bottom:15px;
+    margin-bottom:25px;
 
 }
 
 .header h1{
 
-    font-size:24px;
+    font-size:28px;
 
     font-weight:700;
 
@@ -83,9 +88,9 @@ body{
 
 .back-btn{
 
-    width:42px;
+    width:46px;
 
-    height:42px;
+    height:46px;
 
     border:none;
 
@@ -99,29 +104,45 @@ body{
 
     cursor:pointer;
 
+    transition:.2s;
+
+}
+
+.back-btn:hover{
+
+    background:#4B5563;
+
 }
 
 .logout-btn{
 
     border:none;
 
+    border-radius:10px;
+
+    padding:10px 16px;
+
     background:#DC2626;
 
     color:white;
-
-    padding:8px 14px;
-
-    border-radius:10px;
 
     cursor:pointer;
 
     font-weight:600;
 
+    transition:.2s;
+
 }
 
-/* ===========================
-   BALANCE
-=========================== */
+.logout-btn:hover{
+
+    background:#B91C1C;
+
+}
+
+/* ==================================================
+   WALLET CARD
+================================================== */
 
 .coins-card{
 
@@ -129,7 +150,7 @@ body{
 
     border-radius:18px;
 
-    padding:18px;
+    padding:20px;
 
     display:flex;
 
@@ -137,9 +158,9 @@ body{
 
     align-items:center;
 
-    margin-bottom:18px;
+    margin-bottom:25px;
 
-    color:white;
+    box-shadow:0 10px 25px rgba(251,191,36,.25);
 
 }
 
@@ -147,43 +168,49 @@ body{
 
     font-size:13px;
 
+    opacity:.9;
+
 }
 
 .coins-card h2{
 
-    margin-top:5px;
+    margin-top:8px;
 
-    font-size:30px;
+    font-size:34px;
+
+    font-weight:700;
 
 }
 
 .coin-icon{
 
-    font-size:44px;
+    font-size:48px;
 
 }
 
-/* ===========================
-   SECTION
-=========================== */
+/* ==================================================
+   SECTIONS
+================================================== */
 
 .section{
 
-    margin-bottom:18px;
+    margin-bottom:25px;
 
 }
 
 .section h2{
 
-    margin-bottom:12px;
+    margin-bottom:15px;
 
-    font-size:19px;
+    font-size:22px;
+
+    font-weight:600;
 
 }
 
-/* ===========================
+/* ==================================================
    TABLE GRID
-=========================== */
+================================================== */
 
 .coin-grid{
 
@@ -191,33 +218,37 @@ body{
 
     grid-template-columns:repeat(2,1fr);
 
-    gap:10px;
+    gap:15px;
 
 }
+
+/* ==================================================
+   TABLE CARD
+================================================== */
 
 .coin-card{
 
     position:relative;
 
-    border-radius:15px;
+    background:#374151;
 
-    padding:14px;
+    border-radius:18px;
 
-    text-align:center;
+    border:2px solid transparent;
+
+    padding:18px;
 
     cursor:pointer;
 
+    text-align:center;
+
     transition:.25s;
-
-    border:3px solid transparent;
-
-    color:white;
 
 }
 
 .coin-card:hover{
 
-    transform:translateY(-3px);
+    transform:translateY(-4px);
 
 }
 
@@ -231,103 +262,112 @@ body{
 
 .table-title{
 
+    font-size:18px;
+
     font-weight:700;
 
-    font-size:16px;
+    margin-bottom:10px;
 
 }
 
 .entry{
 
-    margin-top:8px;
+    font-size:13px;
 
-    opacity:.85;
-
-    font-size:12px;
+    color:#D1D5DB;
 
 }
 
 .coins{
 
-    margin-top:6px;
+    margin-top:8px;
 
-    font-size:22px;
+    font-size:26px;
 
     font-weight:700;
 
 }
 
-/* ===========================
+/* ==================================================
    TABLE COLORS
-=========================== */
+================================================== */
 
 .bronze{
 
-    background:linear-gradient(135deg,#8B5E3C,#5D4037);
+    background:linear-gradient(135deg,#8B5A2B,#6D4C41);
 
 }
 
 .silver{
 
-    background:linear-gradient(135deg,#8C9EFF,#546E7A);
+    background:linear-gradient(135deg,#7D8CA3,#546E7A);
 
 }
 
 .gold{
 
-    background:linear-gradient(135deg,#FFD54F,#B8860B);
+    background:linear-gradient(135deg,#D4AF37,#A67C00);
 
 }
 
 .platinum{
 
-    background:linear-gradient(135deg,#7E57C2,#4527A0);
+    background:linear-gradient(135deg,#6D5DF6,#4C1D95);
 
 }
 
 .diamond{
 
-    background:linear-gradient(135deg,#00C6FF,#0066FF);
+    background:linear-gradient(135deg,#00C6FF,#0072FF);
 
 }
-
-/* ===========================
+/* ==================================================
    LOCKED TABLES
-=========================== */
+================================================== */
 
 .coin-card.disabled{
 
     opacity:.35;
 
-    pointer-events:none;
-
     filter:grayscale(100%);
+
+    pointer-events:none;
 
 }
 
 .coin-card.disabled::after{
 
-    content:"🔒";
+    content:"🔒 Locked";
 
     position:absolute;
 
-    top:8px;
+    top:10px;
 
-    right:8px;
+    right:10px;
 
-    font-size:18px;
+    background:#111827;
+
+    color:white;
+
+    padding:4px 10px;
+
+    border-radius:20px;
+
+    font-size:11px;
+
+    font-weight:600;
 
 }
 
-/* ===========================
+/* ==================================================
    GAME MODE
-=========================== */
+================================================== */
 
 .mode-buttons{
 
     display:flex;
 
-    gap:12px;
+    gap:15px;
 
 }
 
@@ -335,23 +375,29 @@ body{
 
     flex:1;
 
-    border:none;
-
-    border-radius:14px;
-
-    padding:16px;
-
     background:#374151;
+
+    border:2px solid transparent;
+
+    border-radius:15px;
+
+    padding:18px;
 
     color:white;
 
-    cursor:pointer;
-
-    font-size:17px;
+    font-size:18px;
 
     font-weight:600;
 
+    cursor:pointer;
+
     transition:.2s;
+
+}
+
+.mode:hover{
+
+    transform:translateY(-2px);
 
 }
 
@@ -359,21 +405,21 @@ body{
 
     background:#2563EB;
 
-}
-
-.mode:hover{
-
-    background:#3B82F6;
+    border-color:#60A5FA;
 
 }
 
-/* ===========================
+/* ==================================================
    PLAY BUTTON
-=========================== */
+================================================== */
 
 .play-btn{
 
     width:100%;
+
+    margin-top:10px;
+
+    padding:18px;
 
     border:none;
 
@@ -383,9 +429,7 @@ body{
 
     color:white;
 
-    padding:18px;
-
-    font-size:22px;
+    font-size:24px;
 
     font-weight:700;
 
@@ -393,43 +437,168 @@ body{
 
     transition:.25s;
 
-    margin-top:8px;
+    box-shadow:0 10px 25px rgba(34,197,94,.30);
 
 }
 
 .play-btn:hover{
 
-    transform:translateY(-2px);
+    transform:translateY(-3px);
 
 }
 
-/* ===========================
+.play-btn:active{
+
+    transform:scale(.98);
+
+}
+
+/* ==================================================
+   INFO LABELS
+================================================== */
+
+.table-title{
+
+    letter-spacing:.5px;
+
+}
+
+.entry{
+
+    opacity:.85;
+
+}
+
+.coins{
+
+    color:#FFF8DC;
+
+}
+
+/* ==================================================
+   ANIMATIONS
+================================================== */
+
+.coin-card{
+
+    transition:
+        transform .25s,
+        box-shadow .25s,
+        border-color .25s;
+
+}
+
+.coin-card:hover{
+
+    box-shadow:0 10px 20px rgba(0,0,0,.30);
+
+}
+
+.play-btn{
+
+    transition:
+        transform .2s,
+        box-shadow .2s;
+
+}
+
+.play-btn:hover{
+
+    box-shadow:0 12px 30px rgba(34,197,94,.35);
+
+}
+
+/* ==================================================
    MOBILE
-=========================== */
+================================================== */
 
-@media(max-width:420px){
+@media(max-width:480px){
 
-    .panel{
-
-        padding:15px;
-
-    }
-
-    .header h1{
-
-        font-size:20px;
-
-    }
-
-    .coin-card{
+    .page{
 
         padding:12px;
 
     }
 
+    .panel{
+
+        width:100%;
+
+        padding:18px;
+
+    }
+
+    .header h1{
+
+        font-size:22px;
+
+    }
+
+    .back-btn{
+
+        width:40px;
+
+        height:40px;
+
+        font-size:20px;
+
+    }
+
+    .logout-btn{
+
+        padding:8px 12px;
+
+        font-size:13px;
+
+    }
+
+    .coins-card{
+
+        padding:16px;
+
+    }
+
+    .coins-card h2{
+
+        font-size:28px;
+
+    }
+
+    .coin-icon{
+
+        font-size:40px;
+
+    }
+
+    .coin-grid{
+
+        gap:10px;
+
+    }
+
+    .coin-card{
+
+        padding:14px;
+
+    }
+
+    .table-title{
+
+        font-size:16px;
+
+    }
+
     .coins{
 
-        font-size:18px;
+        font-size:22px;
+
+    }
+
+    .mode{
+
+        padding:15px;
+
+        font-size:16px;
 
     }
 
@@ -437,8 +606,54 @@ body{
 
         padding:16px;
 
-        font-size:20px;
+        font-size:22px;
 
     }
 
 }
+
+/* ==================================================
+   SMALL PHONES
+================================================== */
+
+@media(max-height:800px){
+
+    .panel{
+
+        padding:18px;
+
+    }
+
+    .header{
+
+        margin-bottom:18px;
+
+    }
+
+    .coins-card{
+
+        margin-bottom:18px;
+
+    }
+
+    .section{
+
+        margin-bottom:18px;
+
+    }
+
+    .coin-card{
+
+        padding:14px;
+
+    }
+
+    .play-btn{
+
+        margin-top:5px;
+
+    }
+
+}
+
+
