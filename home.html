@@ -3,134 +3,270 @@
 
 <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
 
-    <title>Seep King</title>
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<title>Seep King</title>
 
-    <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/home.css">
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet" href="css/game.css">
 
 </head>
 
 <body>
 
-<div class="home">
+<div class="game-container">
 
+    <!-- ===================================== -->
     <!-- Top Bar -->
+    <!-- ===================================== -->
 
     <div class="top-bar">
 
-        <div class="profile">
+        <div class="score-box">
+
+            ⭐
+
+            <span id="team1Score">
+
+                0
+
+            </span>
+
+            -
+
+            <span id="team2Score">
+
+                0
+
+            </span>
+
+        </div>
+
+        <div class="prize-box">
+
+            🪙 Prize
+
+            <span id="prizePool">
+
+                0
+
+            </span>
+
+        </div>
+
+    </div>
+
+    <!-- ===================================== -->
+    <!-- Top Player -->
+    <!-- ===================================== -->
+
+    <div class="player top-player">
+
+        <div class="avatar">
+
+            👤
+
+        </div>
+
+        <div class="player-name"
+             id="player3Name">
+
+            Waiting...
+
+        </div>
+
+        <div class="player-points">
+
+            ⭐ <span id="player3Points">0</span>
+
+        </div>
+
+        <div class="dealer"
+             id="player3Dealer">
+
+            🃏
+
+        </div>
+
+    </div>
+
+    <!-- ===================================== -->
+    <!-- Middle -->
+    <!-- ===================================== -->
+
+    <div class="middle-area">
+
+        <!-- Left -->
+
+        <div
+            class="player side-player"
+            id="leftPlayer">
 
             <div class="avatar">
+
                 👤
+
             </div>
 
-            <div class="profile-info">
+            <div
+                class="player-name"
+                id="player2Name">
 
-                <h2 id="playerName">Loading...</h2>
+                Waiting...
 
-                <small>
-                    ⭐ Level <span id="level">1</span>
-                </small>
+            </div>
+
+            <div>
+
+                ⭐ <span id="player2Points">
+
+                    0
+
+                </span>
+
+            </div>
+
+            <div
+                class="dealer"
+                id="player2Dealer">
+
+                🃏
 
             </div>
 
         </div>
 
-        <div class="coins">
-            🪙 <span id="coins">0</span>
+        <!-- Table -->
+
+        <div class="table">
+
+            <h2>
+
+                Table
+
+            </h2>
+
+            <div
+                id="tableCards"
+                class="table-cards">
+
+            </div>
+
+        </div>
+
+        <!-- Right -->
+
+        <div
+            class="player side-player"
+            id="rightPlayer">
+
+            <div class="avatar">
+
+                👤
+
+            </div>
+
+            <div
+                class="player-name"
+                id="player4Name">
+
+                Waiting...
+
+            </div>
+
+            <div>
+
+                ⭐ <span id="player4Points">
+
+                    0
+
+                </span>
+
+            </div>
+
+            <div
+                class="dealer"
+                id="player4Dealer">
+
+                🃏
+
+            </div>
+
         </div>
 
     </div>
 
-    <!-- Logo -->
+    <!-- ===================================== -->
+    <!-- Bottom Player -->
+    <!-- ===================================== -->
 
-    <div class="logo">
+    <div class="player bottom-player">
 
-        ♠ SEEP KING ♠
+        <div class="avatar">
 
-    </div>
+            👤
 
-    <!-- Menu -->
+        </div>
 
-    <div class="menu">
+        <div
+            class="player-name"
+            id="player1Name">
 
-        <button class="menu-btn blue" id="singleGameBtn">
+            You
 
-            <div class="menu-icon">
-                🎮
-            </div>
+        </div>
 
-            <div>
+        <div>
 
-                <h3>Single Game</h3>
+            ⭐ <span id="player1Points">
 
-                <p>Play against online players</p>
+                0
 
-            </div>
+            </span>
 
-        </button>
+        </div>
 
-        <button class="menu-btn purple" id="friendsBtn">
+        <div
+            class="dealer"
+            id="player1Dealer">
 
-            <div class="menu-icon">
-                👥
-            </div>
+            🃏
 
-            <div>
-
-                <h3>Play With Friends</h3>
-
-                <p>Create or Join Private Room</p>
-
-            </div>
-
-        </button>
-
-        <button class="menu-btn green" id="profileBtn">
-
-            <div class="menu-icon">
-                👤
-            </div>
-
-            <div>
-
-                <h3>Profile</h3>
-
-                <p>Statistics & Achievements</p>
-
-            </div>
-
-        </button>
-
-        <button class="menu-btn red" id="logoutBtn">
-
-            <div class="menu-icon">
-                🚪
-            </div>
-
-            <div>
-
-                <h3>Logout</h3>
-
-                <p>Sign out</p>
-
-            </div>
-
-        </button>
+        </div>
 
     </div>
 
-    <!-- Version -->
+    <!-- ===================================== -->
+    <!-- My Cards -->
+    <!-- ===================================== -->
 
-    <div class="bottom-bar">
+    <div
+        id="myCards"
+        class="my-cards">
 
-        Version 1.0.0
+    </div>
+
+    <!-- ===================================== -->
+    <!-- Bottom Buttons -->
+    <!-- ===================================== -->
+
+    <div class="bottom-buttons">
+
+        <button
+            id="leaveGameBtn"
+            class="leave-btn">
+
+            🚪 Leave Game
+
+        </button>
 
     </div>
 
@@ -138,7 +274,8 @@
 
 <script src="js/api.js"></script>
 <script src="js/auth.js"></script>
-<script src="js/home.js"></script>
+<script src="js/game.js"></script>
 
 </body>
+
 </html>
