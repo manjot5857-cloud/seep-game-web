@@ -171,3 +171,15 @@ body{
     display:none;
 
 }
+
+.status-message{
+
+    margin:20px 0;
+
+    color:#FFD54F;
+
+    font-size:22px;
+
+    font-weight:600;
+
+}
