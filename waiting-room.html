@@ -3,21 +3,21 @@
 
 <head>
 
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-    <title>Waiting Room</title>
+<title>Waiting Room</title>
 
-    <link rel="preconnect"
-          href="https://fonts.googleapis.com">
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-          rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+rel="stylesheet">
 
-    <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/waiting-room.css">
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/waiting-room.css">
 
 </head>
 
@@ -30,7 +30,7 @@
     </h1>
 
     <h2>
-        Waiting For Players...
+        Matchmaking
     </h2>
 
     <div class="room-card">
@@ -63,13 +63,18 @@
 
     </div>
 
+    <div id="statusMessage"
+         class="status-message">
+
+        Waiting for players...
+
+    </div>
+
     <div class="players">
 
         <div class="player-seat" id="seat1">
 
-            <div class="avatar">
-                👤
-            </div>
+            <div class="avatar">👤</div>
 
             <div>
 
@@ -77,9 +82,7 @@
                     Waiting...
                 </h3>
 
-                <p>
-                    Seat 1
-                </p>
+                <p>Seat 1</p>
 
             </div>
 
@@ -87,19 +90,16 @@
 
         <div class="player-seat" id="seat2">
 
-            <div class="avatar">
-                🔍
-            </div>
+            <div class="avatar">👤</div>
 
             <div>
 
                 <h3 id="seat2Name">
                     Searching...
+
                 </h3>
 
-                <p>
-                    Seat 2
-                </p>
+                <p>Seat 2</p>
 
             </div>
 
@@ -107,9 +107,7 @@
 
         <div class="player-seat hidden" id="seat3">
 
-            <div class="avatar">
-                🔍
-            </div>
+            <div class="avatar">👤</div>
 
             <div>
 
@@ -117,9 +115,7 @@
                     Searching...
                 </h3>
 
-                <p>
-                    Seat 3
-                </p>
+                <p>Seat 3</p>
 
             </div>
 
@@ -127,9 +123,7 @@
 
         <div class="player-seat hidden" id="seat4">
 
-            <div class="avatar">
-                🔍
-            </div>
+            <div class="avatar">👤</div>
 
             <div>
 
@@ -137,9 +131,7 @@
                     Searching...
                 </h3>
 
-                <p>
-                    Seat 4
-                </p>
+                <p>Seat 4</p>
 
             </div>
 
@@ -147,7 +139,9 @@
 
     </div>
 
-    <button id="leaveRoomBtn" class="leave-btn">
+    <button
+        id="leaveRoomBtn"
+        class="leave-btn">
 
         Leave Room
 
