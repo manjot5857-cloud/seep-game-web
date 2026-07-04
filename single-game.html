@@ -6,7 +6,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Single Game - Seep King</title>
+<title>Single Match</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
@@ -17,100 +19,149 @@
 
 <body>
 
-<div class="game-page">
+<div class="page">
 
-    <!-- Header -->
+    <div class="panel">
 
-    <div class="top-bar">
+        <div class="header">
 
-        <button class="back-btn" onclick="window.location='home.html'">
-            ← Back
+            <button class="back-btn"
+                onclick="window.location='home.html'">
+
+                ←
+
+            </button>
+
+            <h1>
+
+                🎮 Single Match
+
+            </h1>
+
+            <button id="logoutBtn"
+                class="logout-btn">
+
+                Logout
+
+            </button>
+
+        </div>
+
+        <div class="coins-card">
+
+            <div>
+
+                <small>Your Coins</small>
+
+                <h2 id="coins">0</h2>
+
+            </div>
+
+            <div class="coin-icon">
+
+                🪙
+
+            </div>
+
+        </div>
+
+        <div class="section">
+
+            <h2>Select Table</h2>
+
+            <div class="coin-grid">
+
+                <div class="coin-card selected bronze" data-coins="100">
+
+                    Bronze
+
+                    <strong>100</strong>
+
+                </div>
+
+                <div class="coin-card bronze" data-coins="200">
+
+                    Bronze+
+
+                    <strong>200</strong>
+
+                </div>
+
+                <div class="coin-card silver" data-coins="500">
+
+                    Silver
+
+                    <strong>500</strong>
+
+                </div>
+
+                <div class="coin-card silver" data-coins="1000">
+
+                    Silver+
+
+                    <strong>1,000</strong>
+
+                </div>
+
+                <div class="coin-card gold" data-coins="2500">
+
+                    Gold
+
+                    <strong>2,500</strong>
+
+                </div>
+
+                <div class="coin-card gold" data-coins="5000">
+
+                    Gold+
+
+                    <strong>5,000</strong>
+
+                </div>
+
+                <div class="coin-card diamond" data-coins="10000">
+
+                    Diamond
+
+                    <strong>10,000</strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="section">
+
+            <h2>Game Mode</h2>
+
+            <div class="mode-buttons">
+
+                <button class="mode active" data-mode="1">
+
+                    👤 1 vs 1
+
+                </button>
+
+                <button class="mode" data-mode="2">
+
+                    👥 2 vs 2
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <button
+            id="playNowBtn"
+            class="play-btn">
+
+            ▶ PLAY NOW
+
         </button>
 
-        <div class="coins-display">
-
-            🪙 <span id="coins">0</span>
-
-        </div>
-
     </div>
-
-    <h1>Select Game</h1>
-
-    <p class="subtitle">
-
-        Choose your entry fee
-
-    </p>
-
-    <!-- Coin Tables -->
-
-    <div class="coin-grid">
-
-        <div class="coin-card selected" data-coins="100">
-            <h2>100</h2>
-            <p>Entry Fee</p>
-        </div>
-
-        <div class="coin-card" data-coins="200">
-            <h2>200</h2>
-            <p>Entry Fee</p>
-        </div>
-
-        <div class="coin-card" data-coins="500">
-            <h2>500</h2>
-            <p>Entry Fee</p>
-        </div>
-
-        <div class="coin-card" data-coins="1000">
-            <h2>1,000</h2>
-            <p>Entry Fee</p>
-        </div>
-
-        <div class="coin-card" data-coins="2500">
-            <h2>2,500</h2>
-            <p>Entry Fee</p>
-        </div>
-
-        <div class="coin-card" data-coins="5000">
-            <h2>5,000</h2>
-            <p>Entry Fee</p>
-        </div>
-
-        <div class="coin-card" data-coins="10000">
-            <h2>10,000</h2>
-            <p>Entry Fee</p>
-        </div>
-
-    </div>
-
-    <h2 class="mode-title">
-
-        Select Mode
-
-    </h2>
-
-    <div class="mode-buttons">
-
-        <button class="mode active" data-mode="1">
-
-            👤 1 vs 1
-
-        </button>
-
-        <button class="mode" data-mode="2">
-
-            👥 2 vs 2
-
-        </button>
-
-    </div>
-
-    <button id="playNowBtn" class="play-btn">
-
-        PLAY NOW
-
-    </button>
 
 </div>
 
