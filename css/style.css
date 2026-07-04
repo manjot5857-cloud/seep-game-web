@@ -300,3 +300,213 @@ a{
     cursor:pointer;
 
 }
+.game-page{
+
+    max-width:430px;
+    margin:25px auto;
+    padding:20px;
+
+}
+
+.header{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+
+}
+
+.header h1{
+
+    color:#fff;
+    font-size:30px;
+
+}
+
+.back-btn{
+
+    width:48px;
+    height:48px;
+    border:none;
+    border-radius:50%;
+    background:#2f3c56;
+    color:white;
+    font-size:22px;
+    cursor:pointer;
+
+}
+
+.player-card{
+
+    background:linear-gradient(135deg,#355CFF,#243D90);
+    border-radius:18px;
+    padding:20px;
+    color:white;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    margin-bottom:30px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
+
+}
+
+.player-card h3{
+
+    margin:0;
+    font-size:15px;
+    opacity:.85;
+
+}
+
+.player-card span{
+
+    font-size:34px;
+    font-weight:700;
+
+}
+
+.coin-icon{
+
+    font-size:42px;
+
+}
+
+.section-title{
+
+    color:white;
+    margin-bottom:15px;
+
+}
+
+.coin-grid{
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:16px;
+    margin-bottom:30px;
+
+}
+
+.coin-card{
+
+    border-radius:18px;
+    padding:18px;
+    cursor:pointer;
+    text-align:center;
+    transition:.25s;
+    border:3px solid transparent;
+    color:white;
+
+}
+
+.coin-card:hover{
+
+    transform:translateY(-4px);
+
+}
+
+.coin-card.selected{
+
+    border-color:#FFD700;
+    transform:scale(1.05);
+
+}
+
+.coin-card h2{
+
+    margin:10px 0 5px;
+    font-size:34px;
+
+}
+
+.coin-card small{
+
+    opacity:.9;
+
+}
+
+.table-name{
+
+    display:inline-block;
+    padding:4px 10px;
+    border-radius:20px;
+    background:rgba(255,255,255,.15);
+    font-size:12px;
+
+}
+
+.bronze{
+
+    background:linear-gradient(135deg,#9C6644,#6D4C41);
+
+}
+
+.silver{
+
+    background:linear-gradient(135deg,#7D8CA3,#546E7A);
+
+}
+
+.gold{
+
+    background:linear-gradient(135deg,#D4AF37,#A67C00);
+
+}
+
+.diamond{
+
+    background:linear-gradient(135deg,#00C6FF,#0072FF);
+
+}
+
+.mode-buttons{
+
+    display:flex;
+    gap:15px;
+    margin-bottom:30px;
+
+}
+
+.mode{
+
+    flex:1;
+    padding:18px;
+    border:none;
+    border-radius:15px;
+    background:#2f3c56;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    transition:.2s;
+
+}
+
+.mode.active{
+
+    background:#355CFF;
+
+}
+
+.play-btn{
+
+    width:100%;
+    padding:20px;
+    border:none;
+    border-radius:18px;
+    background:linear-gradient(135deg,#18C964,#0E9F4F);
+    color:white;
+    font-size:24px;
+    font-weight:700;
+    cursor:pointer;
+
+}
+
+.play-btn:hover{
+
+    transform:translateY(-2px);
+
+}
