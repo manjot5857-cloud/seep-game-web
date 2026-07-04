@@ -1,0 +1,182 @@
+.game-page{
+
+    max-width:440px;
+    margin:25px auto;
+    padding:20px;
+
+}
+
+.header{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+
+}
+
+.back-btn{
+
+    width:48px;
+    height:48px;
+
+    border-radius:50%;
+
+    background:#2F3C56;
+
+    color:white;
+
+    font-size:22px;
+
+}
+
+.player-card{
+
+    background:linear-gradient(135deg,#355CFF,#243D90);
+
+    padding:20px;
+
+    border-radius:18px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    margin-bottom:30px;
+
+}
+
+.player-card span{
+
+    font-size:34px;
+    font-weight:700;
+
+}
+
+.coin-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:16px;
+
+}
+
+.coin-card{
+
+    border-radius:18px;
+
+    padding:20px;
+
+    text-align:center;
+
+    cursor:pointer;
+
+    color:white;
+
+    border:3px solid transparent;
+
+    transition:.25s;
+
+}
+
+.coin-card.selected{
+
+    border-color:#FFD700;
+
+    transform:scale(1.04);
+
+}
+
+.coin-card:hover{
+
+    transform:translateY(-4px);
+
+}
+
+.table-name{
+
+    display:inline-block;
+
+    padding:4px 10px;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,.15);
+
+    font-size:12px;
+
+}
+
+.bronze{
+
+    background:linear-gradient(135deg,#9C6644,#6D4C41);
+
+}
+
+.silver{
+
+    background:linear-gradient(135deg,#7D8CA3,#546E7A);
+
+}
+
+.gold{
+
+    background:linear-gradient(135deg,#D4AF37,#A67C00);
+
+}
+
+.diamond{
+
+    background:linear-gradient(135deg,#00C6FF,#0072FF);
+
+}
+
+.mode-buttons{
+
+    display:flex;
+
+    gap:15px;
+
+    margin:30px 0;
+
+}
+
+.mode{
+
+    flex:1;
+
+    padding:18px;
+
+    border-radius:15px;
+
+    background:#2F3C56;
+
+    color:white;
+
+}
+
+.mode.active{
+
+    background:#355CFF;
+
+}
+
+.play-btn{
+
+    width:100%;
+
+    padding:20px;
+
+    border-radius:18px;
+
+    background:linear-gradient(135deg,#18C964,#0E9F4F);
+
+    color:white;
+
+    font-size:22px;
+
+    font-weight:700;
+
+}
