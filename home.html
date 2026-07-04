@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Home</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<div class="auth-container">
+
+<div class="card">
+
+<h1>Welcome</h1>
+
+<h2 id="playerName"></h2>
+
+<p id="coins"></p>
+
+<p id="level"></p>
+
+<p id="wins"></p>
+
+<br>
+
+<button onclick="logout()">
+
+Logout
+
+</button>
+
+</div>
+
+</div>
+
+<script>
+
+const player = JSON.parse(localStorage.getItem("player"));
+
+if(!player){
+
+    window.location.href="login.html";
+
+}
+
+document.getElementById("playerName").innerHTML = player.fullName;
+
+document.getElementById("coins").innerHTML = "Coins : " + player.coins;
+
+document.getElementById("level").innerHTML = "Level : " + player.level;
+
+document.getElementById("wins").innerHTML = "Wins : " + player.wins;
+
+function logout(){
+
+    localStorage.clear();
+
+    window.location.href="login.html";
+
+}
+
+</script>
+
+</body>
+
+</html>
