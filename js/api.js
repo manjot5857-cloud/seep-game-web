@@ -1,49 +1,29 @@
-const API_URL = "https://api.fastedgehosting.com/api";
+async post(endpoint, body) {
 
-const api = {
+    const response = await fetch(API_URL + endpoint, {
 
-    async get(endpoint) {
+        method: "POST",
 
-        const response = await fetch(API_URL + endpoint, {
+        headers: {
 
-            headers: {
+            "Content-Type": "application/json",
 
-                "Authorization": "Bearer " + localStorage.getItem("token")
+            "Authorization": "Bearer " + localStorage.getItem("token")
 
-            }
+        },
 
-        });
+        body: JSON.stringify(body)
 
-        if (!response.ok)
-            throw new Error(await response.text());
+    });
 
-        return await response.json();
+    const data = await response.json().catch(() => null);
 
-    },
+    if (!response.ok) {
 
-    async post(endpoint, body) {
-
-        const response = await fetch(API_URL + endpoint, {
-
-            method: "POST",
-
-            headers: {
-
-                "Content-Type": "application/json",
-
-                "Authorization": "Bearer " + localStorage.getItem("token")
-
-            },
-
-            body: JSON.stringify(body)
-
-        });
-
-        if (!response.ok)
-            throw new Error(await response.text());
-
-        return await response.json();
+        throw new Error(data?.message || "Server error");
 
     }
 
-};
+    return data;
+
+}
