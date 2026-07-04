@@ -1,52 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Seep King</title>
 
-    <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Main CSS -->
     <link rel="stylesheet" href="css/style.css">
+
 </head>
+
 <body>
 
-    <div class="container">
+<div class="auth-container">
 
-        <div class="logo-section">
-            <h1>♠ SEEP KING ♠</h1>
-            <p>The Ultimate Multiplayer Card Game</p>
-        </div>
+    <div class="card">
 
-        <div class="menu">
+        <h1>♠ SEEP KING ♠</h1>
 
-            <button id="loginBtn">
-                Login
-            </button>
+        <h2>The Ultimate Multiplayer Card Game</h2>
 
-            <button id="registerBtn">
-                Register
-            </button>
+        <button onclick="location.href='login.html'">
+            Login
+        </button>
 
-        </div>
+        <button
+            onclick="location.href='register.html'"
+            style="margin-top:15px;">
+            Register
+        </button>
 
-        <div class="footer">
+        <div class="version">
             Version 1.0.0
         </div>
 
     </div>
 
-    <script>
-        document.getElementById("loginBtn").onclick = function () {
-            window.location.href = "login.html";
-        };
-
-        document.getElementById("registerBtn").onclick = function () {
-            window.location.href = "register.html";
-        };
-    </script>
+</div>
 
 </body>
+
 </html>
