@@ -119,22 +119,26 @@ async function loadRoom() {
 
 document.getElementById("leaveRoomBtn").onclick = async () => {
 
-    if (!confirm("Leave room?"))
+    if (!confirm("Are you sure you want to leave the room?"))
         return;
 
     try {
 
         await api.post("/rooms/" + roomId + "/leave", {});
 
-    }
-    catch {
+        clearInterval(refreshTimer);
+
+        localStorage.removeItem("roomId");
+
+        window.location = "single-game.html";
 
     }
+    catch (err) {
 
-    clearInterval(refreshTimer);
+        console.error(err);
 
-    localStorage.removeItem("roomId");
+        alert("Unable to leave room.");
 
-    window.location = "home.html";
+    }
 
 };
