@@ -1,72 +1,70 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Home</title>
+    <title>Seep King</title>
 
-<link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 
 <body>
 
-<div class="auth-container">
+<div class="home-container">
 
-<div class="card">
+    <div class="card">
 
-<h1>Welcome</h1>
+        <h1>♠ SEEP KING ♠</h1>
 
-<h2 id="playerName"></h2>
+        <h2 id="welcomeText">Welcome</h2>
 
-<p id="coins"></p>
+        <div class="stats">
 
-<p id="level"></p>
+            <div class="stat-box">
+                <span>🪙 Coins</span>
+                <h3 id="coins">0</h3>
+            </div>
 
-<p id="wins"></p>
+            <div class="stat-box">
+                <span>⭐ Level</span>
+                <h3 id="level">1</h3>
+            </div>
 
-<br>
+        </div>
 
-<button onclick="logout()">
+        <button id="playOnlineBtn">
+            🎮 Play Online
+        </button>
 
-Logout
+        <button id="playFriendBtn">
+            👥 Play With Friend
+        </button>
 
-</button>
+        <button id="practiceBtn">
+            🤖 Practice
+        </button>
+
+        <button id="profileBtn">
+            👤 Profile
+        </button>
+
+        <button id="logoutBtn">
+            Logout
+        </button>
+
+    </div>
 
 </div>
 
-</div>
-
-<script>
-
-const player = JSON.parse(localStorage.getItem("player"));
-
-if(!player){
-
-    window.location.href="login.html";
-
-}
-
-document.getElementById("playerName").innerHTML = player.fullName;
-
-document.getElementById("coins").innerHTML = "Coins : " + player.coins;
-
-document.getElementById("level").innerHTML = "Level : " + player.level;
-
-document.getElementById("wins").innerHTML = "Wins : " + player.wins;
-
-function logout(){
-
-    localStorage.clear();
-
-    window.location.href="login.html";
-
-}
-
-</script>
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/home.js"></script>
 
 </body>
 
