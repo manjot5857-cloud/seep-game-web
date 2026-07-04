@@ -1,0 +1,52 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+    background:#111827;
+    color:white;
+
+}
+
+button{
+
+    border:none;
+    cursor:pointer;
+    transition:.25s;
+    font-family:'Poppins',sans-serif;
+
+}
+
+input{
+
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:#374151;
+    color:white;
+    font-size:16px;
+
+}
+
+input::placeholder{
+
+    color:#9CA3AF;
+
+}
+
+a{
+
+    text-decoration:none;
+
+}
+
+.hidden{
+
+    display:none;
+
+}
