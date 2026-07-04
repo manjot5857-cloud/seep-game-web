@@ -1,5 +1,44 @@
-const player = await getPlayer();
+(async function () {
 
-document.getElementById("playerName").textContent = player.fullName;
-document.getElementById("coins").textContent = player.coins;
-document.getElementById("level").textContent = player.level;
+    const player = await getPlayer();
+
+    document.getElementById("welcomeText").innerHTML =
+        "Welcome, " + player.fullName;
+
+    document.getElementById("coins").innerHTML =
+        player.coins;
+
+    document.getElementById("level").innerHTML =
+        player.level;
+
+})();
+
+document.getElementById("logoutBtn").onclick = function () {
+
+    logout();
+
+};
+
+document.getElementById("playOnlineBtn").onclick = function () {
+
+    alert("Create Room - Coming Next");
+
+};
+
+document.getElementById("playFriendBtn").onclick = function () {
+
+    alert("Play With Friend - Coming Next");
+
+};
+
+document.getElementById("practiceBtn").onclick = function () {
+
+    alert("Practice Mode - Coming Next");
+
+};
+
+document.getElementById("profileBtn").onclick = function () {
+
+    alert("Profile - Coming Next");
+
+};
