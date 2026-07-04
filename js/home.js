@@ -2,8 +2,8 @@
 
     const player = await getPlayer();
 
-    document.getElementById("welcomeText").innerHTML =
-        "Welcome, " + player.fullName;
+    document.getElementById("playerName").innerHTML =
+        player.fullName;
 
     document.getElementById("coins").innerHTML =
         player.coins;
@@ -19,26 +19,20 @@ document.getElementById("logoutBtn").onclick = function () {
 
 };
 
-document.getElementById("playOnlineBtn").onclick = function () {
+document.getElementById("singleGameBtn").onclick = function () {
 
-    alert("Create Room - Coming Next");
-
-};
-
-document.getElementById("playFriendBtn").onclick = function () {
-
-    alert("Play With Friend - Coming Next");
+    window.location.href = "single-game.html";
 
 };
 
-document.getElementById("practiceBtn").onclick = function () {
+document.getElementById("friendsBtn").onclick = function () {
 
-    alert("Practice Mode - Coming Next");
+    alert("Play With Friends - Coming Soon");
 
 };
 
 document.getElementById("profileBtn").onclick = function () {
 
-    alert("Profile - Coming Next");
+    alert("Profile - Coming Soon");
 
 };
