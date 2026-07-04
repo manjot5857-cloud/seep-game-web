@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Waiting Room</title>
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/waiting-room.css">
+
+</head>
+
+<body>
+
+<div class="waiting-container">
+
+    <h1>
+        ♠ SEEP KING ♠
+    </h1>
+
+    <h2>
+        Waiting For Players...
+    </h2>
+
+    <div class="room-card">
+
+        <div class="room-code">
+
+            Room Code
+
+            <strong id="roomCode">
+                ------
+            </strong>
+
+        </div>
+
+        <div class="progress">
+
+            <span id="playersJoined">
+                1
+            </span>
+
+            /
+
+            <span id="playersRequired">
+                2
+            </span>
+
+            Players
+
+        </div>
+
+    </div>
+
+    <div class="players">
+
+        <div class="player-seat" id="seat1">
+
+            <div class="avatar">
+                👤
+            </div>
+
+            <div>
+
+                <h3 id="seat1Name">
+                    Waiting...
+                </h3>
+
+                <p>
+                    Seat 1
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="player-seat" id="seat2">
+
+            <div class="avatar">
+                🔍
+            </div>
+
+            <div>
+
+                <h3 id="seat2Name">
+                    Searching...
+                </h3>
+
+                <p>
+                    Seat 2
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="player-seat hidden" id="seat3">
+
+            <div class="avatar">
+                🔍
+            </div>
+
+            <div>
+
+                <h3 id="seat3Name">
+                    Searching...
+                </h3>
+
+                <p>
+                    Seat 3
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="player-seat hidden" id="seat4">
+
+            <div class="avatar">
+                🔍
+            </div>
+
+            <div>
+
+                <h3 id="seat4Name">
+                    Searching...
+                </h3>
+
+                <p>
+                    Seat 4
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <button id="leaveRoomBtn" class="leave-btn">
+
+        Leave Room
+
+    </button>
+
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/waiting-room.js"></script>
+
+</body>
+
+</html>
