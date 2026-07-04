@@ -1,46 +1,68 @@
 let selectedCoins = 100;
-
 let selectedMode = 1;
 
-document.querySelectorAll(".coin-card").forEach(card=>{
+//-------------------------------------
+// Load Player
+//-------------------------------------
 
-    card.onclick=()=>{
+(async () => {
 
-        document.querySelectorAll(".coin-card")
-        .forEach(c=>c.classList.remove("selected"));
+    try {
 
-        card.classList.add("selected");
+        const player = await getPlayer();
 
-        selectedCoins=card.dataset.coins;
+        document.getElementById("coins").innerHTML = player.coins;
 
-    };
+    }
+    catch {
 
-});
+        logout();
 
-document.querySelectorAll(".mode").forEach(btn=>{
-
-    btn.onclick=()=>{
-
-        document.querySelectorAll(".mode")
-        .forEach(x=>x.classList.remove("active"));
-
-        btn.classList.add("active");
-
-        selectedMode=btn.dataset.mode;
-
-    };
-
-});
-
-(async()=>{
-
-    const player=await getPlayer();
-
-    document.getElementById("coins").innerHTML=player.coins;
+    }
 
 })();
 
+//-------------------------------------
+// Select Coin Table
+//-------------------------------------
 
+document.querySelectorAll(".coin-card").forEach(card => {
+
+    card.onclick = () => {
+
+        document.querySelectorAll(".coin-card")
+            .forEach(c => c.classList.remove("selected"));
+
+        card.classList.add("selected");
+
+        selectedCoins = Number(card.dataset.coins);
+
+    };
+
+});
+
+//-------------------------------------
+// Select Game Mode
+//-------------------------------------
+
+document.querySelectorAll(".mode").forEach(btn => {
+
+    btn.onclick = () => {
+
+        document.querySelectorAll(".mode")
+            .forEach(b => b.classList.remove("active"));
+
+        btn.classList.add("active");
+
+        selectedMode = Number(btn.dataset.mode);
+
+    };
+
+});
+
+//-------------------------------------
+// Play Now
+//-------------------------------------
 
 document.getElementById("playNowBtn").onclick = async () => {
 
@@ -48,9 +70,9 @@ document.getElementById("playNowBtn").onclick = async () => {
 
         const result = await api.post("/rooms/find-match", {
 
-            entryFee: Number(selectedCoins),
+            entryFee: selectedCoins,
 
-            gameMode: Number(selectedMode)
+            gameMode: selectedMode
 
         });
 
@@ -68,9 +90,5 @@ document.getElementById("playNowBtn").onclick = async () => {
         alert("Unable to find a game.");
 
     }
-
-};
-
-
 
 };
