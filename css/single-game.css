@@ -1,57 +1,210 @@
-.game-page{
+/* ----------------------------------
+   PAGE
+-----------------------------------*/
 
-    max-width:440px;
-    margin:25px auto;
-    padding:20px;
+body{
+
+    margin:0;
+    padding:0;
+
+    font-family:'Poppins',sans-serif;
+
+    background:linear-gradient(180deg,#111827,#1F2937);
+
+    color:white;
+
+    min-height:100vh;
 
 }
+
+.page{
+
+    display:flex;
+
+    justify-content:center;
+
+    padding:40px 20px;
+
+}
+
+/* ----------------------------------
+   PANEL
+-----------------------------------*/
+
+.panel{
+
+    width:100%;
+    max-width:460px;
+
+    background:#1F2937;
+
+    border:2px solid #374151;
+
+    border-radius:25px;
+
+    padding:30px;
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.45);
+
+}
+
+/* ----------------------------------
+   HEADER
+-----------------------------------*/
 
 .header{
 
     display:flex;
+
     justify-content:space-between;
-    align-items:center;
-    margin-bottom:20px;
 
-}
-
-.back-btn{
-
-    width:48px;
-    height:48px;
-
-    border-radius:50%;
-
-    background:#2F3C56;
-
-    color:white;
-
-    font-size:22px;
-
-}
-
-.player-card{
-
-    background:linear-gradient(135deg,#355CFF,#243D90);
-
-    padding:20px;
-
-    border-radius:18px;
-
-    display:flex;
-    justify-content:space-between;
     align-items:center;
 
     margin-bottom:30px;
 
 }
 
-.player-card span{
+.header h1{
 
-    font-size:34px;
+    margin:0;
+
+    font-size:28px;
+
     font-weight:700;
 
+    color:white;
+
 }
+
+/* ----------------------------------
+   BUTTONS
+-----------------------------------*/
+
+.back-btn{
+
+    width:48px;
+    height:48px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#374151;
+
+    color:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.back-btn:hover{
+
+    background:#4B5563;
+
+}
+
+.logout-btn{
+
+    width:auto;
+
+    padding:10px 18px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#EF4444;
+
+    color:white;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.logout-btn:hover{
+
+    background:#DC2626;
+
+}
+
+/* ----------------------------------
+   COIN CARD
+-----------------------------------*/
+
+.coins-card{
+
+    background:linear-gradient(135deg,#355CFF,#1E3A8A);
+
+    border-radius:20px;
+
+    padding:25px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:35px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.35);
+
+}
+
+.coins-card small{
+
+    opacity:.8;
+
+    font-size:14px;
+
+}
+
+.coins-card h2{
+
+    margin-top:8px;
+
+    margin-bottom:0;
+
+    font-size:40px;
+
+}
+
+.coin-icon{
+
+    font-size:48px;
+
+}
+
+/* ----------------------------------
+   SECTIONS
+-----------------------------------*/
+
+.section{
+
+    margin-bottom:35px;
+
+}
+
+.section h2{
+
+    margin-bottom:18px;
+
+    font-size:22px;
+
+}
+
+/* ----------------------------------
+   TABLE GRID
+-----------------------------------*/
 
 .coin-grid{
 
@@ -63,6 +216,10 @@
 
 }
 
+/* ----------------------------------
+   TABLE CARD
+-----------------------------------*/
+
 .coin-card{
 
     border-radius:18px;
@@ -73,11 +230,29 @@
 
     cursor:pointer;
 
-    color:white;
+    transition:.25s;
 
     border:3px solid transparent;
 
-    transition:.25s;
+    color:white;
+
+    font-weight:600;
+
+}
+
+.coin-card strong{
+
+    display:block;
+
+    margin-top:10px;
+
+    font-size:28px;
+
+}
+
+.coin-card:hover{
+
+    transform:translateY(-5px);
 
 }
 
@@ -85,29 +260,13 @@
 
     border-color:#FFD700;
 
-    transform:scale(1.04);
+    transform:scale(1.03);
 
 }
 
-.coin-card:hover{
-
-    transform:translateY(-4px);
-
-}
-
-.table-name{
-
-    display:inline-block;
-
-    padding:4px 10px;
-
-    border-radius:20px;
-
-    background:rgba(255,255,255,.15);
-
-    font-size:12px;
-
-}
+/* ----------------------------------
+   TABLE COLORS
+-----------------------------------*/
 
 .bronze{
 
@@ -133,13 +292,29 @@
 
 }
 
+/* ----------------------------------
+   DISABLED TABLE
+-----------------------------------*/
+
+.coin-card.disabled{
+
+    opacity:.35;
+
+    pointer-events:none;
+
+    filter:grayscale(100%);
+
+}
+
+/* ----------------------------------
+   GAME MODES
+-----------------------------------*/
+
 .mode-buttons{
 
     display:flex;
 
     gap:15px;
-
-    margin:30px 0;
 
 }
 
@@ -149,34 +324,102 @@
 
     padding:18px;
 
+    border:none;
+
     border-radius:15px;
 
-    background:#2F3C56;
+    background:#374151;
 
     color:white;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.25s;
 
 }
 
 .mode.active{
 
-    background:#355CFF;
+    background:#2563EB;
 
 }
+
+.mode:hover{
+
+    background:#3B82F6;
+
+}
+
+/* ----------------------------------
+   PLAY BUTTON
+-----------------------------------*/
 
 .play-btn{
 
     width:100%;
 
+    margin-top:15px;
+
     padding:20px;
+
+    border:none;
 
     border-radius:18px;
 
-    background:linear-gradient(135deg,#18C964,#0E9F4F);
+    background:linear-gradient(135deg,#22C55E,#15803D);
 
     color:white;
 
-    font-size:22px;
+    font-size:24px;
 
     font-weight:700;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    box-shadow:0 10px 25px rgba(34,197,94,.30);
+
+}
+
+.play-btn:hover{
+
+    transform:translateY(-3px);
+
+}
+
+.play-btn:active{
+
+    transform:scale(.98);
+
+}
+
+/* ----------------------------------
+   MOBILE
+-----------------------------------*/
+
+@media(max-width:500px){
+
+    .panel{
+
+        padding:22px;
+
+    }
+
+    .coin-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .header h1{
+
+        font-size:22px;
+
+    }
 
 }
