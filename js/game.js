@@ -1,6 +1,3 @@
-//--------------------------------------
-// Game Variables
-//--------------------------------------
 
 const roomId = localStorage.getItem("roomId");
 
