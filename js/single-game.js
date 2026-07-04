@@ -92,3 +92,10 @@ document.getElementById("playNowBtn").onclick = async () => {
     }
 
 };
+
+
+document.getElementById("logoutBtn").onclick = () => {
+
+    logout();
+
+};
