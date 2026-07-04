@@ -40,20 +40,37 @@ document.querySelectorAll(".mode").forEach(btn=>{
 
 })();
 
-document.getElementById("playNowBtn").onclick=()=>{
 
-    console.log({
 
-        coins:selectedCoins,
+document.getElementById("playNowBtn").onclick = async () => {
 
-        mode:selectedMode
+    try {
 
-    });
-    localStorage.setItem("roomId", result.roomId);
+        const result = await api.post("/rooms/find-match", {
 
-    window.location = "waiting-room.html";
+            entryFee: Number(selectedCoins),
 
-    // Next step:
-    // POST /api/rooms/create
+            gameMode: Number(selectedMode)
+
+        });
+
+        console.log(result);
+
+        localStorage.setItem("roomId", result.roomId);
+
+        window.location = "waiting-room.html";
+
+    }
+    catch (err) {
+
+        console.error(err);
+
+        alert("Unable to find a game.");
+
+    }
+
+};
+
+
 
 };
