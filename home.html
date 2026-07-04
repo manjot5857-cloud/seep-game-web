@@ -3,60 +3,131 @@
 
 <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Seep King</title>
+<title>Seep King</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.css">
 
 </head>
 
 <body>
 
-<div class="home-container">
+<div class="home">
 
-    <div class="card">
+    <!-- Top Bar -->
 
-        <h1>♠ SEEP KING ♠</h1>
+    <div class="top-bar">
 
-        <h2 id="welcomeText">Welcome</h2>
+        <div class="profile">
 
-        <div class="stats">
-
-            <div class="stat-box">
-                <span>🪙 Coins</span>
-                <h3 id="coins">0</h3>
+            <div class="avatar">
+                👤
             </div>
 
-            <div class="stat-box">
-                <span>⭐ Level</span>
-                <h3 id="level">1</h3>
+            <div class="profile-info">
+
+                <h2 id="playerName">Loading...</h2>
+
+                <small>
+                    ⭐ Level <span id="level">1</span>
+                </small>
+
             </div>
 
         </div>
 
-        <button id="playOnlineBtn">
-            🎮 Play Online
+        <div class="coins">
+
+            🪙 <span id="coins">0</span>
+
+        </div>
+
+    </div>
+
+    <!-- Logo -->
+
+    <div class="logo">
+
+        ♠ SEEP KING ♠
+
+    </div>
+
+    <!-- Main Buttons -->
+
+    <div class="menu">
+
+        <button class="menu-btn blue" id="singleGameBtn">
+
+            🎮
+
+            <div>
+
+                <h3>Single Game</h3>
+
+                <p>Play against online players</p>
+
+            </div>
+
         </button>
 
-        <button id="playFriendBtn">
-            👥 Play With Friend
+        <button class="menu-btn purple" id="friendsBtn">
+
+            👥
+
+            <div>
+
+                <h3>Play With Friends</h3>
+
+                <p>Create or Join Room</p>
+
+            </div>
+
         </button>
 
-        <button id="practiceBtn">
-            🤖 Practice
+        <button class="menu-btn green" id="profileBtn">
+
+            👤
+
+            <div>
+
+                <h3>Profile</h3>
+
+                <p>Statistics & Achievements</p>
+
+            </div>
+
         </button>
 
-        <button id="profileBtn">
-            👤 Profile
+        <button class="menu-btn red" id="logoutBtn">
+
+            🚪
+
+            <div>
+
+                <h3>Logout</h3>
+
+                <p>Sign out</p>
+
+            </div>
+
         </button>
 
-        <button id="logoutBtn">
-            Logout
-        </button>
+    </div>
+
+    <!-- Bottom -->
+
+    <div class="bottom-bar">
+
+        <div>
+
+            Version 1.0.0
+
+        </div>
 
     </div>
 
