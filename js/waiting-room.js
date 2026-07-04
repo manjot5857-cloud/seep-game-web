@@ -12,35 +12,19 @@ loadRoom();
 
 refreshTimer = setInterval(loadRoom, 2000);
 
+//-------------------------------------
+// Load Room
+//-------------------------------------
+
 async function loadRoom() {
 
     try {
 
-        const response = await fetch(API_URL + "/rooms/" + roomId, {
+        const room = await api.get("/rooms/" + roomId);
 
-            headers: {
-
-                "Authorization": "Bearer " + getToken()
-
-            }
-
-        });
-
-        if (!response.ok) {
-
-            alert("Room not found.");
-
-            window.location = "home.html";
-
-            return;
-
-        }
-
-        const room = await response.json();
-
-        //--------------------------------------------------
+        //---------------------------------
         // Room Info
-        //--------------------------------------------------
+        //---------------------------------
 
         document.getElementById("roomCode").innerHTML =
             room.roomCode;
@@ -51,26 +35,26 @@ async function loadRoom() {
         document.getElementById("playersRequired").innerHTML =
             room.maxPlayers;
 
-        //--------------------------------------------------
-        // Show seats
-        //--------------------------------------------------
+        //---------------------------------
+        // Hide Seats (1vs1)
+        //---------------------------------
 
-        if (room.maxPlayers === 2) {
+        if (room.maxPlayers == 2) {
 
-            document.getElementById("seat3").classList.add("hidden");
-            document.getElementById("seat4").classList.add("hidden");
+            document.getElementById("seat3").style.display = "none";
+            document.getElementById("seat4").style.display = "none";
 
         }
         else {
 
-            document.getElementById("seat3").classList.remove("hidden");
-            document.getElementById("seat4").classList.remove("hidden");
+            document.getElementById("seat3").style.display = "block";
+            document.getElementById("seat4").style.display = "block";
 
         }
 
-        //--------------------------------------------------
+        //---------------------------------
         // Reset Seats
-        //--------------------------------------------------
+        //---------------------------------
 
         for (let i = 1; i <= room.maxPlayers; i++) {
 
@@ -79,24 +63,23 @@ async function loadRoom() {
 
         }
 
-        //--------------------------------------------------
+        //---------------------------------
         // Fill Players
-        //--------------------------------------------------
+        //---------------------------------
 
         room.players.forEach(player => {
 
             document.getElementById(
                 "seat" + player.seatNumber + "Name"
-            ).innerHTML =
-                player.fullName;
+            ).innerHTML = player.fullName;
 
         });
 
-        //--------------------------------------------------
+        //---------------------------------
         // Game Started?
-        //--------------------------------------------------
+        //---------------------------------
 
-        if (room.status === 2 || room.status === "Playing") {
+        if (room.status === 1 || room.status === "Playing") {
 
             clearInterval(refreshTimer);
 
@@ -109,31 +92,12 @@ async function loadRoom() {
 
         console.error(err);
 
+        clearInterval(refreshTimer);
+
+        alert("Room no longer exists.");
+
+        window.location = "home.html";
+
     }
 
 }
-
-document.getElementById("leaveRoomBtn").onclick = async function () {
-
-    if (!confirm("Leave this room?"))
-        return;
-
-    await fetch(API_URL + "/rooms/" + roomId + "/leave", {
-
-        method: "POST",
-
-        headers: {
-
-            "Authorization": "Bearer " + getToken()
-
-        }
-
-    });
-
-    clearInterval(refreshTimer);
-
-    localStorage.removeItem("roomId");
-
-    window.location = "home.html";
-
-};
