@@ -139,3 +139,56 @@ a{
 
     font-size:14px;
 }
+.home-container{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-height:100vh;
+
+}
+
+.stats{
+
+    display:flex;
+
+    gap:15px;
+
+    margin:25px 0;
+
+}
+
+.stat-box{
+
+    flex:1;
+
+    background:#374151;
+
+    padding:15px;
+
+    border-radius:12px;
+
+    text-align:center;
+
+}
+
+.stat-box span{
+
+    color:#9CA3AF;
+
+    font-size:14px;
+
+}
+
+.stat-box h3{
+
+    margin-top:8px;
+
+    color:white;
+
+    font-size:24px;
+
+}
