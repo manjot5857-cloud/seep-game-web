@@ -3,17 +3,20 @@
 
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
 
-<title>Single Match</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>Seep King - Single Match</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
 
-<link rel="stylesheet" href="css/common.css">
-<link rel="stylesheet" href="css/single-game.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="css/single-game.css">
 
 </head>
 
@@ -23,9 +26,12 @@
 
     <div class="panel">
 
+        <!-- Header -->
+
         <div class="header">
 
-            <button class="back-btn"
+            <button
+                class="back-btn"
                 onclick="window.location='home.html'">
 
                 ←
@@ -38,7 +44,8 @@
 
             </h1>
 
-            <button id="logoutBtn"
+            <button
+                id="logoutBtn"
                 class="logout-btn">
 
                 Logout
@@ -47,94 +54,206 @@
 
         </div>
 
+        <!-- Coins -->
+
         <div class="coins-card">
 
             <div>
 
-                <small>Your Coins</small>
+                <small>Available Balance</small>
 
-                <h2 id="coins">0</h2>
+                <h2>
+
+                    🪙
+                    <span id="coins">
+                        0
+                    </span>
+
+                </h2>
 
             </div>
 
             <div class="coin-icon">
 
-                🪙
+                💰
 
             </div>
 
         </div>
 
+        <!-- Table Selection -->
+
         <div class="section">
 
-            <h2>Select Table</h2>
+            <h2>
+
+                Choose Your Table
+
+            </h2>
 
             <div class="coin-grid">
 
-                <div class="coin-card selected bronze" data-coins="100">
+                <div
+                    class="coin-card bronze selected"
+                    data-coins="100">
 
-                    Bronze
+                    <div class="table-title">
 
-                    <strong>100</strong>
+                        🥉 Bronze
 
-                </div>
+                    </div>
 
+                    <div class="entry">
 
-                <div class="coin-card silver" data-coins="500">
+                        Entry Fee
 
-                    Silver
+                    </div>
 
-                    <strong>500</strong>
+                    <div class="coins">
 
-                <div class="coin-card gold" data-coins="2500">
+                        🪙 100
 
-                    Gold
-
-                    <strong>2,500</strong>
-
-                </div>
-
-                <div class="coin-card gold" data-coins="5000">
-
-                    Gold+
-
-                    <strong>5,000</strong>
+                    </div>
 
                 </div>
 
-                <div class="coin-card diamond" data-coins="10000">
+                <div
+                    class="coin-card silver"
+                    data-coins="500">
 
-                    Diamond
+                    <div class="table-title">
 
-                    <strong>10,000</strong>
+                        ⚪ Silver
+
+                    </div>
+
+                    <div class="entry">
+
+                        Entry Fee
+
+                    </div>
+
+                    <div class="coins">
+
+                        🪙 500
+
+                    </div>
+
+                </div>
+
+                <div
+                    class="coin-card gold"
+                    data-coins="2500">
+
+                    <div class="table-title">
+
+                        🥇 Gold
+
+                    </div>
+
+                    <div class="entry">
+
+                        Entry Fee
+
+                    </div>
+
+                    <div class="coins">
+
+                        🪙 2,500
+
+                    </div>
+
+                </div>
+
+                <div
+                    class="coin-card platinum"
+                    data-coins="5000">
+
+                    <div class="table-title">
+
+                        👑 Platinum
+
+                    </div>
+
+                    <div class="entry">
+
+                        Entry Fee
+
+                    </div>
+
+                    <div class="coins">
+
+                        🪙 5,000
+
+                    </div>
+
+                </div>
+
+                <div
+                    class="coin-card diamond"
+                    data-coins="10000">
+
+                    <div class="table-title">
+
+                        💎 Diamond
+
+                    </div>
+
+                    <div class="entry">
+
+                        Entry Fee
+
+                    </div>
+
+                    <div class="coins">
+
+                        🪙 10,000
+
+                    </div>
 
                 </div>
 
             </div>
 
         </div>
+
+        <!-- Game Mode -->
 
         <div class="section">
 
-            <h2>Game Mode</h2>
+            <h2>
+
+                Game Mode
+
+            </h2>
 
             <div class="mode-buttons">
 
-                <button class="mode active" data-mode="1">
+                <button
+                    class="mode active"
+                    data-mode="1">
 
-                    👤 1 vs 1
+                    👤
+                    <br>
+                    1 vs 1
 
                 </button>
 
-                <button class="mode" data-mode="2">
+                <button
+                    class="mode"
+                    data-mode="2">
 
-                    👥 2 vs 2
+                    👥
+                    <br>
+                    2 vs 2
 
                 </button>
 
             </div>
 
         </div>
+
+        <!-- Play -->
 
         <button
             id="playNowBtn"
