@@ -1,29 +1,149 @@
-async post(endpoint, body) {
+const API_URL = "https://api.fastedgehosting.com/api";
 
-    const response = await fetch(API_URL + endpoint, {
+//----------------------------------------
+// Get JWT Token
+//----------------------------------------
 
-        method: "POST",
+function getToken() {
 
-        headers: {
+    return localStorage.getItem("token");
 
-            "Content-Type": "application/json",
+}
 
-            "Authorization": "Bearer " + localStorage.getItem("token")
+//----------------------------------------
+// Common Headers
+//----------------------------------------
 
-        },
+function getHeaders(isJson = true) {
 
-        body: JSON.stringify(body)
+    const headers = {};
 
-    });
+    if (isJson) {
+        headers["Content-Type"] = "application/json";
+    }
 
-    const data = await response.json().catch(() => null);
+    const token = getToken();
 
-    if (!response.ok) {
+    if (token) {
+        headers["Authorization"] = "Bearer " + token;
+    }
 
-        throw new Error(data?.message || "Server error");
+    return headers;
+
+}
+
+//----------------------------------------
+// API Helper
+//----------------------------------------
+
+const api = {
+
+    //------------------------------------
+    // GET
+    //------------------------------------
+
+    async get(endpoint) {
+
+        const response = await fetch(API_URL + endpoint, {
+
+            method: "GET",
+
+            headers: getHeaders(false)
+
+        });
+
+        const data = await response.json().catch(() => null);
+
+        if (!response.ok) {
+
+            throw new Error(data?.message || "Request failed.");
+
+        }
+
+        return data;
+
+    },
+
+    //------------------------------------
+    // POST
+    //------------------------------------
+
+    async post(endpoint, body) {
+
+        const response = await fetch(API_URL + endpoint, {
+
+            method: "POST",
+
+            headers: getHeaders(),
+
+            body: JSON.stringify(body)
+
+        });
+
+        const data = await response.json().catch(() => null);
+
+        if (!response.ok) {
+
+            throw new Error(data?.message || "Request failed.");
+
+        }
+
+        return data;
+
+    },
+
+    //------------------------------------
+    // PUT
+    //------------------------------------
+
+    async put(endpoint, body) {
+
+        const response = await fetch(API_URL + endpoint, {
+
+            method: "PUT",
+
+            headers: getHeaders(),
+
+            body: JSON.stringify(body)
+
+        });
+
+        const data = await response.json().catch(() => null);
+
+        if (!response.ok) {
+
+            throw new Error(data?.message || "Request failed.");
+
+        }
+
+        return data;
+
+    },
+
+    //------------------------------------
+    // DELETE
+    //------------------------------------
+
+    async delete(endpoint) {
+
+        const response = await fetch(API_URL + endpoint, {
+
+            method: "DELETE",
+
+            headers: getHeaders(false)
+
+        });
+
+        const data = await response.json().catch(() => null);
+
+        if (!response.ok) {
+
+            throw new Error(data?.message || "Request failed.");
+
+        }
+
+        return data;
 
     }
 
-    return data;
-
-}
+};
