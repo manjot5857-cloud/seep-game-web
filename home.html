@@ -3,130 +3,53 @@
 
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-<title>Seep King</title>
+    <title>Seep King</title>
 
-<link rel="preconnect"
-href="https://fonts.googleapis.com">
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
 
-<link rel="stylesheet" href="css/game.css">
+    <link rel="stylesheet" href="css/home.css">
 
 </head>
 
 <body>
 
-<div class="game-container">
+<div class="home-container">
 
-    <!-- ===================================== -->
-    <!-- Top Bar -->
-    <!-- ===================================== -->
+    <div class="card">
 
-    <div class="top-bar">
+        <!-- Header -->
 
-        <div class="score-box">
+        <h1>
 
-            ⭐
+            🃏 Seep King
 
-            <span id="team1Score">
+        </h1>
 
-                0
+        <h2>
 
-            </span>
+            Welcome,
+            <span id="playerName">Player</span>
 
-            -
+        </h2>
 
-            <span id="team2Score">
+        <!-- Coins -->
 
-                0
-
-            </span>
-
-        </div>
-
-        <div class="prize-box">
-
-            🪙 Prize
-
-            <span id="prizePool">
-
-                0
-
-            </span>
-
-        </div>
-
-    </div>
-
-    <!-- ===================================== -->
-    <!-- Top Player -->
-    <!-- ===================================== -->
-
-    <div class="player top-player">
-
-        <div class="avatar">
-
-            👤
-
-        </div>
-
-        <div class="player-name"
-             id="player3Name">
-
-            Waiting...
-
-        </div>
-
-        <div class="player-points">
-
-            ⭐ <span id="player3Points">0</span>
-
-        </div>
-
-        <div class="dealer"
-             id="player3Dealer">
-
-            🃏
-
-        </div>
-
-    </div>
-
-    <!-- ===================================== -->
-    <!-- Middle -->
-    <!-- ===================================== -->
-
-    <div class="middle-area">
-
-        <!-- Left -->
-
-        <div
-            class="player side-player"
-            id="leftPlayer">
-
-            <div class="avatar">
-
-                👤
-
-            </div>
-
-            <div
-                class="player-name"
-                id="player2Name">
-
-                Waiting...
-
-            </div>
+        <div class="player-card">
 
             <div>
 
-                ⭐ <span id="player2Points">
+                <h3>Available Coins</h3>
+
+                <span id="coins">
 
                     0
 
@@ -134,137 +57,49 @@ rel="stylesheet">
 
             </div>
 
-            <div
-                class="dealer"
-                id="player2Dealer">
+            <div class="coin-icon">
 
-                🃏
+                🪙
 
             </div>
 
         </div>
 
-        <!-- Table -->
-
-        <div class="table">
-
-            <h2>
-
-                Table
-
-            </h2>
-
-            <div
-                id="tableCards"
-                class="table-cards">
-
-            </div>
-
-        </div>
-
-        <!-- Right -->
-
-        <div
-            class="player side-player"
-            id="rightPlayer">
-
-            <div class="avatar">
-
-                👤
-
-            </div>
-
-            <div
-                class="player-name"
-                id="player4Name">
-
-                Waiting...
-
-            </div>
-
-            <div>
-
-                ⭐ <span id="player4Points">
-
-                    0
-
-                </span>
-
-            </div>
-
-            <div
-                class="dealer"
-                id="player4Dealer">
-
-                🃏
-
-            </div>
-
-        </div>
-
-    </div>
-
-    <!-- ===================================== -->
-    <!-- Bottom Player -->
-    <!-- ===================================== -->
-
-    <div class="player bottom-player">
-
-        <div class="avatar">
-
-            👤
-
-        </div>
-
-        <div
-            class="player-name"
-            id="player1Name">
-
-            You
-
-        </div>
-
-        <div>
-
-            ⭐ <span id="player1Points">
-
-                0
-
-            </span>
-
-        </div>
-
-        <div
-            class="dealer"
-            id="player1Dealer">
-
-            🃏
-
-        </div>
-
-    </div>
-
-    <!-- ===================================== -->
-    <!-- My Cards -->
-    <!-- ===================================== -->
-
-    <div
-        id="myCards"
-        class="my-cards">
-
-    </div>
-
-    <!-- ===================================== -->
-    <!-- Bottom Buttons -->
-    <!-- ===================================== -->
-
-    <div class="bottom-buttons">
+        <!-- Menu -->
 
         <button
-            id="leaveGameBtn"
-            class="leave-btn">
+            id="singleGameBtn">
 
-            🚪 Leave Game
+            🎮 Single Game
+
+        </button>
+
+        <button
+            id="friendsBtn">
+
+            👥 Play With Friends
+
+        </button>
+
+        <button
+            disabled>
+
+            🏆 Leaderboard (Coming Soon)
+
+        </button>
+
+        <button
+            disabled>
+
+            👤 Profile (Coming Soon)
+
+        </button>
+
+        <button
+            id="logoutBtn"
+            class="logout-btn">
+
+            🚪 Logout
 
         </button>
 
@@ -274,7 +109,7 @@ rel="stylesheet">
 
 <script src="js/api.js"></script>
 <script src="js/auth.js"></script>
-<script src="js/game.js"></script>
+<script src="js/home.js"></script>
 
 </body>
 
