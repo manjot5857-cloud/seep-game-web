@@ -1,4 +1,4 @@
-(async function () {
+(async () => {
 
     const player = await getPlayer();
 
@@ -8,31 +8,22 @@
     document.getElementById("coins").innerHTML =
         player.coins;
 
-    document.getElementById("level").innerHTML =
-        player.level;
-
 })();
 
-document.getElementById("logoutBtn").onclick = function () {
+document.getElementById("singleGameBtn").onclick = () => {
+
+    window.location = "single-game.html";
+
+};
+
+document.getElementById("friendsBtn").onclick = () => {
+
+    alert("Coming Soon!");
+
+};
+
+document.getElementById("logoutBtn").onclick = () => {
 
     logout();
-
-};
-
-document.getElementById("singleGameBtn").onclick = function () {
-
-    window.location.href = "single-game.html";
-
-};
-
-document.getElementById("friendsBtn").onclick = function () {
-
-    alert("Play With Friends - Coming Soon");
-
-};
-
-document.getElementById("profileBtn").onclick = function () {
-
-    alert("Profile - Coming Soon");
 
 };
