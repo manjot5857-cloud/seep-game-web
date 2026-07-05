@@ -349,3 +349,402 @@ hr{
     margin:20px 0;
 
 }
+/* ==================================================
+   WALLET CARD
+================================================== */
+
+.coins-card{
+
+    background:linear-gradient(135deg,#FBBF24,#B45309);
+
+    border-radius:18px;
+
+    padding:20px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:25px;
+
+    color:white;
+
+    box-shadow:0 10px 25px rgba(251,191,36,.25);
+
+}
+
+.coins-card small{
+
+    display:block;
+
+    font-size:13px;
+
+    opacity:.9;
+
+}
+
+.coins-card h2{
+
+    margin-top:8px;
+
+    font-size:34px;
+
+    font-weight:700;
+
+}
+
+.coin-icon{
+
+    font-size:48px;
+
+}
+
+/* ==================================================
+   PLAYER CARD
+================================================== */
+
+.player-card{
+
+    background:#374151;
+
+    border-radius:18px;
+
+    border:2px solid transparent;
+
+    padding:18px;
+
+    transition:.25s;
+
+}
+
+.player-card.active{
+
+    border-color:#3B82F6;
+
+    box-shadow:0 0 20px rgba(59,130,246,.35);
+
+}
+
+.player-card.winner{
+
+    border-color:#22C55E;
+
+}
+
+.player-card.loser{
+
+    opacity:.75;
+
+}
+
+.player-name{
+
+    font-size:18px;
+
+    font-weight:700;
+
+}
+
+.player-level{
+
+    color:#9CA3AF;
+
+    font-size:13px;
+
+}
+
+.player-score{
+
+    margin-top:10px;
+
+    font-size:22px;
+
+    color:#FFD54A;
+
+    font-weight:700;
+
+}
+
+/* ==================================================
+   SECTION
+================================================== */
+
+.section{
+
+    margin-bottom:25px;
+
+}
+
+.section-title{
+
+    font-size:22px;
+
+    font-weight:700;
+
+    margin-bottom:15px;
+
+}
+
+/* ==================================================
+   GENERIC CARD
+================================================== */
+
+.card{
+
+    background:#374151;
+
+    border-radius:18px;
+
+    padding:18px;
+
+    border:2px solid transparent;
+
+    transition:.25s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-3px);
+
+}
+
+.card.selected{
+
+    border-color:#FFD700;
+
+}
+
+.card.disabled{
+
+    opacity:.45;
+
+    filter:grayscale(100%);
+
+    pointer-events:none;
+
+}
+
+/* ==================================================
+   GRID
+================================================== */
+
+.grid{
+
+    display:grid;
+
+    gap:15px;
+
+}
+
+.grid-2{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.grid-3{
+
+    grid-template-columns:repeat(3,1fr);
+
+}
+
+.grid-4{
+
+    grid-template-columns:repeat(4,1fr);
+
+}
+
+/* ==================================================
+   COLOR THEMES
+================================================== */
+
+.bronze{
+
+    background:linear-gradient(135deg,#8B5A2B,#6D4C41);
+
+}
+
+.silver{
+
+    background:linear-gradient(135deg,#7D8CA3,#546E7A);
+
+}
+
+.gold{
+
+    background:linear-gradient(135deg,#D4AF37,#A67C00);
+
+}
+
+.platinum{
+
+    background:linear-gradient(135deg,#6D5DF6,#4C1D95);
+
+}
+
+.diamond{
+
+    background:linear-gradient(135deg,#00C6FF,#0072FF);
+
+}
+
+.green{
+
+    background:linear-gradient(135deg,#22C55E,#15803D);
+
+}
+
+.red{
+
+    background:linear-gradient(135deg,#EF4444,#B91C1C);
+
+}
+
+.blue{
+
+    background:linear-gradient(135deg,#355CFF,#2342A8);
+
+}
+
+.purple{
+
+    background:linear-gradient(135deg,#8B5CF6,#6D28D9);
+
+}
+
+/* ==================================================
+   STATUS BADGES
+================================================== */
+
+.badge{
+
+    display:inline-block;
+
+    padding:5px 12px;
+
+    border-radius:20px;
+
+    font-size:12px;
+
+    font-weight:700;
+
+}
+
+.badge-success{
+
+    background:#15803D;
+
+}
+
+.badge-warning{
+
+    background:#B45309;
+
+}
+
+.badge-danger{
+
+    background:#B91C1C;
+
+}
+
+.badge-info{
+
+    background:#2563EB;
+
+}
+
+/* ==================================================
+   LOADING
+================================================== */
+
+.loading{
+
+    text-align:center;
+
+    color:#9CA3AF;
+
+    padding:30px;
+
+}
+
+/* ==================================================
+   UTILITIES
+================================================== */
+
+.hidden{
+
+    display:none !important;
+
+}
+
+.full-width{
+
+    width:100%;
+
+}
+
+.flex{
+
+    display:flex;
+
+}
+
+.flex-between{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.flex-center{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.mt-10{
+
+    margin-top:10px;
+
+}
+
+.mt-20{
+
+    margin-top:20px;
+
+}
+
+.mb-10{
+
+    margin-bottom:10px;
+
+}
+
+.mb-20{
+
+    margin-bottom:20px;
+
+}
+
+.text-center{
+
+    text-align:center;
+
+}
+
+.text-right{
+
+    text-align:right;
+
+}
